@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Hero from './components/Hero';
+import Navbar from './components/Navbar';
+import Services from './components/Services';
+import Projects from './components/Project';
+// import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <main>
+        <Hero />
+        <Services />
+        <Projects />
+        {/* <Contact /> */}
+      </main>
+
+      <footer className="bg-gray-900 text-gray-300 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p>
+              &copy; {new Date().getFullYear()} DevMatrix. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
